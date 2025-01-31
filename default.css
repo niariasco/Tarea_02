@@ -1,17 +1,37 @@
+/* Estilos para la caja principal */
 .box {
-    width: 300px;
-    padding: 20px;
-    border: 5px solid green;
-    margin: 15px;
-    background-color: blue;
-    color: white;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 16px;
-    display: inline-block;
-  }
-  
-  .box-2 {
-    border-color: lightblue;
-    background-color: pink;
-  }
+  width: 300px; /* Establece el ancho de la caja a 300px */
+  padding: 20px; /* Añade 20px de espacio dentro de la caja alrededor del contenido */
+  border: 5px solid green; /* Define un borde de 5px de grosor y color verde */
+  margin: 15px; /* Añade un margen de 15px alrededor de la caja (espacio exterior) */
+  background-color: blue; /* Establece el color de fondo de la caja a azul */
+  color: white; /* Establece el color del texto a blanco */
+  box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el tamaño total de la caja */
+  text-align: center; /* Centra el texto dentro de la caja */
+  font-size: 16px; /* Establece el tamaño de la fuente a 16px */
+  display: inline-block; /* Muestra la caja como un bloque en línea, lo que permite que se alineen horizontalmente */
+}
+
+/* Estilos para la segunda caja, que sobrescribe algunas propiedades de .box */
+.box-2 {
+  border-color: lightblue; /* Cambia el color del borde a azul claro */
+  background-color: pink; /* Cambia el color de fondo a rosa */
+}
+
+.block {
+  display: block;
+  background: lightblue;
+  width: 100%;
+}
+
+.inline {
+  display: inline;
+  color: red;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background: yellow;
+}
