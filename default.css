@@ -1,4 +1,6 @@
 /* Estilos para la caja principal */
+/*1.	Comprender y aplicar el modelo de caja (Box Model) de CSS3 de manera efectiva 
+para controlar el diseño y la presentación de los elementos en una página web.*/
 .box {
   width: 300px; /* Establece el ancho de la caja a 300px */
   padding: 20px; /* Añade 20px de espacio dentro de la caja alrededor del contenido */
@@ -17,7 +19,8 @@
   border-color: lightblue; /* Cambia el color del borde a azul claro */
   background-color: pink; /* Cambia el color de fondo a rosa */
 }
-
+/*2.	Diferenciar entre elementos de bloque y en línea en HTML y 
+utilizar adecuadamente las propiedades de CSS3 para manipular su presentación y comportamiento.*/
 .block {
   display: block;
   background: lightblue;
@@ -35,3 +38,435 @@
   height: 50px;
   background: yellow;
 }
+/*3.	Dominar el posicionamiento de elementos utilizando la propiedad Position en CSS3, 
+incluyendo los diferentes valores y sus efectos en la disposición de los elementos.*/
+.container { /* (contenedor principal)*/
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #f2aaae;
+  margin: 50px;
+}
+.absolute { /* se posiciona respecto al .container */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #ffe7c1;
+  padding: 10px;
+  color: black;
+}
+.fixed { /*elemento fijo,Siempre visible en pantalla*/
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #d0e9e9;
+  color: black;
+  padding: 10px;
+  z-index: 1000; /* Asegura que esté por encima */
+}
+
+.sticky { /*Se pega cuando haces scroll*/
+  position: sticky;
+  top: 50px; /* Asegura que no toque al fixed */
+  background: #f4c09d;
+  color: black;
+  padding: 10px;
+  z-index: 10; /* Menor que el fixed */
+}
+
+/*4.	Utilizar las propiedades Float y 
+Clear de manera precisa para crear diseños de página complejos y responsivos.*/
+.container2 {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  background: orange;
+
+}
+
+.header, .footer {
+  background: #f6cec8;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.sidebar {
+  width: 30%;
+  float: left; 
+  background: #ccc7ae;
+  padding: 20px;
+}
+
+.content {
+  width: 70%;
+  float: right;
+  background: #eed5b7;
+  padding: 20px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*6.	Controlar el desbordamiento de contenido en elementos HTML
+ utilizando la propiedad Overflow y seleccionando el valor más adecuado según el contexto.*/
+
+ .contenedor3 {
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #333;
+  overflow: hidden; /* Definir overflow como 'hidden' */
+  background-color: #f0f0f0;
+}
+.contenido {
+  width: 400px; /* El contenido es más grande que el contenedor */
+  height: 300px;
+  background-color: #d8d7b2;
+}
+
+/* Overflow: auto (aparece barra de desplazamiento cuando es necesario) */
+.auto {
+  width: 300px;
+  height: 100px;
+  margin: 20px;
+  padding: 5px;
+  border: 2px solid #333;
+  overflow: auto;
+  background-color: #9A9B87;
+}
+
+/* Overflow: scroll (siempre aparece la barra de desplazamiento) */
+.scroll {
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #333;
+  overflow: scroll;
+  background-color: #E4C6BD;
+}
+
+/* Overflow: hidden (oculta el contenido desbordante) */
+.hidden {
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #333;
+  overflow: hidden;
+  background-color: #AD8E85;
+}
+
+/* Overflow: visible (el contenido desbordante es visible fuera del contenedor) */
+.visible {
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #333;
+  overflow: visible;
+  background-color: #f0e0d0;
+}
+/*7.	Gestionar la visibilidad de los elementos en una página web mediante la 
+propiedad Visibility, asegurando una experiencia de usuario coherente y comprensible.*/
+    /* Estilo para el contenedor general */
+    .contenedor4 {
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid #333;
+      background-color: #f9f9f9;
+    }
+
+    /* Elemento visible por defecto */
+    .visible {
+      visibility: visible;
+      padding: 20px;
+      background-color: #cce7ff;
+      margin: 10px 0;
+      border: 2px solid #007bff;
+    }
+
+    /* Elemento oculto con visibility: hidden */
+    .oculto {
+      visibility: hidden;
+      padding: 20px;
+      background-color: #ffcccc;
+      margin: 10px 0;
+      border: 2px solid #ff0000;
+    }
+
+    /* Elemento que aparece con un cambio en visibility */
+    .boton {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .boton:hover {
+      background-color: #45a049;
+    }
+
+/*8.	Controlar el apilamiento de elementos en capas utilizando 
+la propiedad Z-Index, 
+especialmente en situaciones donde se superponen varios elementos.*/
+  /* Contenedor principal */
+  .contenedor5 {
+    position: relative; /*padre*/
+    width: 500px;
+    height: 300px;
+    margin: 50px auto;
+    border: 2px solid #333;
+    background-color: #f0f0f0;
+  }
+
+  /* Elemento 1: fondo rojo */
+  .capa1 {
+    position: absolute; /* Posición absoluta para apilar */ /*hijo*/
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    top: 50px;
+    left: 50px;
+    z-index: 1; /* Apilar primero (más bajo) */
+  }
+
+  /* Elemento 2: fondo azul */
+  .capa2 {
+    position: absolute;/*hijo*/
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    top: 100px;
+    left: 100px;
+    z-index: 3; /* Apilar encima del primero (más alto) */
+  }
+
+  /* Elemento 3: fondo verde */
+  .capa3 {
+    position: absolute;/*hijo*/
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    top: 150px;
+    left: 150px;
+    z-index: 2; /* Apilar encima del primero, pero debajo del segundo */
+  }
+
+  /* Estilos para el texto */
+  .texto {
+    text-align: top center;
+    color: white;
+    font-size: 20px;
+    line-height: 200px;
+  }
+ 
+
+/*9.	Diseñar y construir diseños flexibles y responsivos utilizando l
+as capacidades de CSS3 Flexbox, 
+optimizando la experiencia del usuario en diferentes dispositivos y tamaños de pantalla.*/
+  /* Estilo básico para el contenedor */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  /* Contenedor principal */
+  .contenedor6 {
+    display: flex; /* Activamos Flexbox */
+    flex-wrap: wrap; /* Permitimos que los elementos se envuelvan */
+    justify-content: space-between; /* Distribuye el espacio entre las columnas */
+    margin: 20px;
+  }
+
+  /* Caja de cada columna */
+  .columna {
+    flex: 1; /* Hace que todas las columnas tengan el mismo tamaño */
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  /* Efecto de hover */
+  .columna:hover {
+    transform: translateY(-10px); /* Efecto para dar profundidad */
+  }
+
+  /* Títulos */
+  .titulo {
+    font-size: 24px;
+    color: #333;
+  }
+  
+      /* Estilo para quitar el subrayado en los enlaces */
+      a {
+        text-decoration: none; /* Elimina el subrayado en los enlaces */
+        color: inherit; /* Hereda el color del texto para que no cambie */
+      }
+  
+      /* Elimina el subrayado también cuando el enlace está enfocado o activado */
+      a:focus, a:active {
+        text-decoration: none; /* Elimina el subrayado cuando se hace clic */
+      }
+
+      
+  /* Diseño para pantallas grandes (escritorio) */
+  @media (min-width: 1024px) {
+    .columna {
+      flex: 1 1 22%; /* Cuatro columnas iguales en pantallas grandes */
+    }
+  }
+
+  /* Diseño para tabletas (pantallas medianas) */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .columna {
+      flex: 1 1 45%; /* Dos columnas en tabletas */
+    }
+  }
+
+  /* Diseño para móviles (pantallas pequeñas) */
+  @media (max-width: 768px) {
+    .columna {
+      flex: 1 1 100%; /* Una columna en móviles */
+    }
+  }
+
+  /*Flex Container*/
+   /* Estilo básico para el contenedor */
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contenedor8 {
+    display: flex; /* Habilita el uso de Flexbox */
+    flex-flow: row wrap; /* Establece la dirección y permite el ajuste de elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 15px; /* Espacio entre los elementos */
+    padding: 20px;
+    background-color: #e0f7fa;
+    height: 100vh; /* Altura completa de la ventana */
+
+  }
+
+  .columna2 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    align-content: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /*flex Item*/
+  .contenedor9 { 
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 400px;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  .item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .item1 {
+    order: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 150px;
+  }
+
+  .item2 {
+    order: 1;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 100px;
+    align-self: center;
+  }
+
+  .item3 {
+    order: 3;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    align-self: flex-end;
+  }
+  /*B.	Flex Responsive*/
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  .contenedor10 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    justify-content: space-around; /* Distribuye las tarjetas de manera uniforme */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
+  }
+
+  .tarjeta {
+    background-color: #4CAF50;
+    color: white;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 20px;
+  }
+  .tarjeta:hover {
+    transform: translateY(-10px); /* Efecto para dar profundidad */
+  }
+  /* Estilo para pantallas medianas */
+  @media (max-width: 768px) {
+    .contenedor {
+      flex-direction: column; /* Los elementos se apilan en columna */
+      align-items: center; /* Alinea las tarjetas al centro */
+    }
+
+    .tarjeta {
+      width: 80%; /* Las tarjetas ocupan el 80% del ancho del contenedor */
+      height: 150px;
+    }
+  }
+
+  /* Estilo para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .tarjeta {
+      width: 90%; /* Las tarjetas ocupan el 90% del ancho */
+      height: 120px;
+      font-size: 16px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+  }

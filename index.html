@@ -8,12 +8,185 @@
   <link rel="stylesheet" href="default.css">
 </head>
 <body>
+<!--1.	Comprender y aplicar el modelo de caja (Box Model) de CSS3 
+de manera efectiva para controlar el diseño y la presentación de los elementos en una página web.-->
+<h1 style="text-align: center;">Box Model</h1>
   <div class="box">Caja 1: Modelo de Caja CSS3</div>
   <div class="box box-2">Caja 2: Modelo de Caja CSS3</div>
-
+<!--2.	Diferenciar entre elementos de bloque y en línea en HTML y 
+utilizar adecuadamente las propiedades de CSS3 para manipular su presentación y comportamiento.-->
+<h1 style="text-align: center;">Display y sus diferentes valores.</h1>
   <div class="block">Bloque</div>
   <span class="inline">En línea</span>
   <div class="inline-block">Inline-block</div>
+
+<!--3.	Dominar el posicionamiento de elementos utilizando la propiedad Position en CSS3, 
+incluyendo los diferentes valores y sus efectos en la disposición de los elementos.-->
+<h1 style="text-align: center;"> Position en CSS3.</h1>
+  <div class="fixed">Este es un fijo</div>
+  <div class="sticky">Este es un sticky</div>
+  <div class="container">
+      <p>Este es un contenedor.</p>
+      <div class="absolute">Soy absoluto</div>
+  </div>
+  <p style="height: 200px;">Haz scroll para ver el comporitamiento.</p>
+
+<!--4.	Utilizar las propiedades Float y Clear de manera precisa para 
+crear diseños de página complejos y responsivos.-->
+<h1 style="text-align: center;"> Float y Clear.</h1>
+
+  <div class="container2">
+    <div class="header">Encabezado</div>
+
+    <div class="clearfix">
+        <div class="sidebar">Barra lateral</div>
+        <div class="content">Contenido principal</div>
+    </div>
+
+    <div class="footer">Pie de página</div>
+</div>
+
+<!--6.	Controlar el desbordamiento de contenido en elementos HTML utilizando 
+la propiedad Overflow y seleccionando el valor más adecuado según el contexto.-->
+
+<h1 style="text-align: center;"> Overflow en CSS.</h1>
+
+<!-- Contenedor con overflow: auto -->
+<div class="auto">
+  <div class="contenido">
+    Contenido con overflow: auto. <br/>
+    Las barras de desplazamiento <br/>aparecerán solo cuando sea necesario.
+  </div>
+</div>
+
+<!-- Contenedor con overflow: scroll -->
+<div class="scroll">
+  <div class="contenido">
+    Contenido con overflow: scroll. Las barras de desplazamiento siempre estarán visibles.
+  </div>
+</div>
+
+<!-- Contenedor con overflow: hidden -->
+<div class="hidden">
+  <div class="contenido">
+    Contenido con overflow: hidden. El contenido desbordante será ocultado.
+    El contenido desbordante será ocultado.
+  </div>
+</div>
+
+<!-- Contenedor con overflow: visible -->
+<div class="visible">
+  <div class="contenido">
+    Contenido con overflow: visible. El contenido desbordante será visible fuera del contenedor.
+  </div>
+</div>
+
+
+<!--7.	Gestionar la visibilidad de los elementos en una página web mediante la 
+propiedad Visibility, asegurando una experiencia de usuario coherente y comprensible.-->
+<h1 style="text-align: center;"> Visibility.</h1>
+<div class="contenedor4">
+    <br/><br/><br/>
+    <h2>Gestión de Visibilidad con CSS</h2>
+
+    <div class="visible">
+      Este elemento es visible.
+    </div>
+
+    <div class="oculto">
+      Este elemento está oculto pero sigue ocupando espacio en la página.
+    </div>
+
+    <button class="boton" onclick="toggleVisibility()">Mostrar/Ocultar Elemento</button>
+
+    <div id="extra" class="oculto">
+      Este es otro elemento que se ocultará o se mostrará al hacer clic en el botón.
+    </div>
+  </div>
+  <script>
+    // Función para alternar la visibilidad de un elemento
+    function toggleVisibility() {
+      var extraElement = document.getElementById('extra');
+      if (extraElement.style.visibility === 'hidden') {
+        extraElement.style.visibility = 'visible';
+      } else {
+        extraElement.style.visibility = 'hidden';
+      }
+    }
+  </script>
+
+<!--8.	Controlar el apilamiento de elementos en capas utilizando 
+la propiedad Z-Index, 
+especialmente en situaciones donde se superponen varios elementos.-->
+<h1 style="text-align: center;"> Z-Index.</h1>
+<div class="contenedor5">
+    <!-- Elemento rojo -->
+    <div class="capa1">
+      <div class="texto">Capa1</div>
+    </div>
+    <!-- Elemento azul -->
+    <div class="capa2">
+      <div class="texto">Capa2</div>
+    </div>
+    <!-- Elemento verde -->
+    <div class="capa3">
+      <div class="texto">Capa3</div>
+    </div>
+  </div>
+
+
+
+<!--9.	Diseñar y construir diseños flexibles y responsivos utilizando 
+las capacidades de CSS3 Flexbox, 
+optimizando la experiencia del usuario en diferentes dispositivos y tamaños de pantalla.-->
+<h1 style="text-align: center;">CSS3 Flexbox.</h1>
+<div class="contenedor6">
+    <div class="columna">
+      <div class="titulo">Opcion 1</div>
+      <p>Contenido de la Opcion 1.</p>
+    </div>
+
+     <!-- Columna 2 con un enlace -->
+     <a href="https://niariasco.github.io/Tarea_02/" target="_blank" class="columna">
+        <div class="titulo">Opcion 2</div>
+        <p>Contenido de la Opcion 2.</p>
+      </a>
+
+    <div class="columna">
+      <div class="titulo">Opcion 3</div>
+      <p>Contenido de la Opcion 3.</p>
+    </div>
+    <div class="columna">
+      <div class="titulo">Opcion 4</div>
+      <p>Contenido de la Opcion 4.</p>
+    </div>
+  </div>
+
+<!--Flex Container-->
+<h1 style="text-align: center;">Flex Container</h1>
+<div class="contenedor8">
+    <div class="columna2">Flex Container 1</div> 
+    <div class="columna2">Flex Container 2</div>
+    <div class="columna2">Flex Container 3</div>
+    <div class="columna2">Flex Container 4</div>
+    <div class="columna2">Flex Container 5</div>
+    <div class="columna2">Flex Container 6</div>
+  </div>
+
+<!--Flex Items-->
+<h1 style="text-align: center;">Flex Items</h1>
+<div class="contenedor9">
+    <div class="item item1">Flex Item 1</div>
+    <div class="item item2">Flex Item  2</div>
+    <div class="item item3">Flex Item  3</div>
+  </div>
+<!--Flex Responsive-->
+<h1 style="text-align: center;">Flex Responsive</h1>
+<div class="contenedor10">
+    <div class="tarjeta">Tarjeta 1</div>
+    <div class="tarjeta">Tarjeta 2</div>
+    <div class="tarjeta">Tarjeta 3</div>
+  </div>
 
 </body>
 </html>
